@@ -1,13 +1,5 @@
 {
-  "redirects": [
-    { "source": "/category/:slug",       "destination": "/products/:slug",                  "permanent": true },
-    { "source": "/vip-concierge-booking","destination": "/services/vip-concierge-booking",   "permanent": true },
-    { "source": "/exporters-directory",  "destination": "/exporters",                        "permanent": true },
-    { "source": "/about-us",             "destination": "/about",                            "permanent": true },
-    { "source": "/contact-us",           "destination": "/contact",                          "permanent": true },
-    { "source": "/submit-inquiry",       "destination": "/inquiry",                          "permanent": true }
-  ],
   "rewrites": [
-    { "source": "/((?!assets/|sitemap|robots|favicon).*)", "destination": "/index.html" }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
