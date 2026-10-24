@@ -29,14 +29,27 @@ export default function App() {
         <main className="flex-1">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/category/:slug" element={<Category />} />
-            <Route path="/vip-concierge-booking" element={<VipConciergeBooking />} />
+
+            {/* محصولات — جایگزین /category/:slug */}
+            <Route path="/products/:slug" element={<Category />} />
+
+            {/* خدمات — جایگزین /vip-concierge-booking */}
+            <Route path="/services/vip-concierge-booking" element={<VipConciergeBooking />} />
+
+            {/* بلاگ */}
             <Route path="/blog" element={<BlogList />} />
             <Route path="/blog/:slug" element={<BlogArticle />} />
-            <Route path="/exporters-directory" element={<ExportersDirectory />} />
-            <Route path="/submit-inquiry" element={<SubmitInquiry />} />
-            <Route path="/about-us" element={<About />} />
-            <Route path="/contact-us" element={<Contact />} />
+
+            {/* صادرکنندگان — جایگزین /exporters-directory */}
+            <Route path="/exporters" element={<ExportersDirectory />} />
+
+            {/* فرم استعلام — خارج از ایندکس */}
+            <Route path="/inquiry" element={<SubmitInquiry />} />
+
+            {/* صفحات ثابت — جایگزین /about-us و /contact-us */}
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
